@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--td-button-padding);
-  width: var(--td-button-custom-width);
+  width: var(--td-button-custom-width, fit-content);
   font: var(--td-button-text);
   color: var(--td-button-color-text);
   background-color: var(--td-button-color-background);

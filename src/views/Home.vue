@@ -7,7 +7,7 @@
           <!-- <img alt="logo" src="../assets/logo.svg"> -->
           <div class="header">
             <IconLogo class="logo" />
-            <Button size="xs" v-if="!isMobile">Daftar Sekarang</Button>
+            <Button anchor href="/design-system" size="xs" v-if="!isMobile">Daftar Sekarang</Button>
           </div>
         </div>
         <div class="container__top--content">
@@ -15,7 +15,7 @@
             <span class="content__title">{{title}}</span>
             <span class="content__desc">Dapatkan harga khusus premium  yang lebih murah hingga 60%+  dengan menjadi Reseller Premium</span>
             <div class="content__button">
-              <Button size="lg" :fullWidth="isMobile">
+              <Button anchor href="/design-system" size="lg" :fullWidth="isMobile">
                 <span>Daftar Sekarang</span>
                 <IconChevronRight />
               </Button>
@@ -87,7 +87,7 @@ export default {
     IconLogo
   },
   mounted () {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   },
   computed: {
     isMobile () {
@@ -98,7 +98,7 @@ export default {
       return 'Reselling lebih Untung dengan Penghasilan Lebih dari 10jt/ bulan'
     },
     contactTitle () {
-      if (this.isMobile) return  '24 Jam'
+      if (this.isMobile) return '24 Jam'
       return 'Chat Kami'
     },
     contactDesc () {
@@ -113,15 +113,14 @@ export default {
     handleScroll () {
       const scrollTrigger = 60
       if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
-        console.log(this.$refs);
-        this.$refs.header.classList.add('onscroll');
+        this.$refs.header.classList.add('onscroll')
       } else {
-        this.$refs.header.classList.remove('onscroll');
+        this.$refs.header.classList.remove('onscroll')
       }
     }
   },
   destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
