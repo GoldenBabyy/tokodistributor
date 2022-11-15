@@ -4,10 +4,11 @@
       <div class="container__top">
         <img class="container__top--pattern" alt="thumbnail" src="../assets/pattern.svg" />
         <div class="container__top--header" ref="header">
-          <!-- <img alt="logo" src="../assets/logo.svg"> -->
           <div class="header">
             <IconLogo class="logo" />
-            <Button anchor href="/design-system" size="xs" v-if="!isMobile">Daftar Sekarang</Button>
+            <router-link to="/design-system">
+              <Button size="xs" v-if="!isMobile">Daftar Sekarang</Button>
+            </router-link>
           </div>
         </div>
         <div class="container__top--content">
@@ -15,10 +16,12 @@
             <span class="content__title">{{title}}</span>
             <span class="content__desc">Dapatkan harga khusus premium  yang lebih murah hingga 60%+  dengan menjadi Reseller Premium</span>
             <div class="content__button">
-              <Button anchor href="/design-system" size="lg" :fullWidth="isMobile">
-                <span>Daftar Sekarang</span>
-                <IconChevronRight />
-              </Button>
+              <router-link to="/design-system">
+                <Button size="lg" :fullWidth="isMobile">
+                  <span>Daftar Sekarang</span>
+                  <IconChevronRight />
+                </Button>
+              </router-link>
             </div>
           </div>
           <img class="content__thumbnail" alt="thumbnail" src="../assets/thumbnail.png">

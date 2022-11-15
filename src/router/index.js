@@ -13,12 +13,11 @@ const routes = [
   {
     path: '/design-system',
     name: 'Design System',
-    component: () => import(/* webpackChunkName: "about" */ '../views/DesignSystem.vue')
+    component: () => import(/* webpackChunkName: "ds" */ '@/views/DesignSystem.vue')
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
