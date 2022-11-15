@@ -1,0 +1,50 @@
+@import '@/design-system/tokens/ds-alias-tokens';
+
+// Default
+$td-button-secondary-color-background: $td-color-neutral-component-white-true;
+$td-button-secondary-color-text: $td-color-red-text-default;
+$td-button-secondary-icon-color: $td-color-red-icon-default;
+$td-button-ghost-color-background: none;
+$td-button-ghost-color-text: $td-color-white-text-default;
+$td-button-ghost-icon-color: $td-color-white-icon-default;
+$td-button-text-xs: $td-text-label-1;
+$td-button-text-sm: $td-text-body-bold-3;
+$td-button-text-base: $td-text-body-bold-3;
+$td-button-text-md: $td-text-body-bold-3;
+$td-button-text-lg: $td-text-body-bold-2;
+$td-button-icon-size-xs: $td-size-icon-xs;
+$td-button-icon-size-sm: $td-size-icon-sm;
+$td-button-icon-size-base: $td-size-icon-default;
+$td-button-icon-size-md: $td-size-icon-md;
+$td-button-icon-size-lg: $td-size-icon-lg;
+$td-button-padding-xs: 7.5px 16px;
+$td-button-padding-sm: 8px 20px;
+$td-button-padding-base: 8px 20px;
+$td-button-padding-md: 9px 20px;
+$td-button-padding-lg: 11px 20px;
+$td-button-font-family: $td-text-font-family-default;
+
+// Hover
+$td-button-secondary-color-background-hovered: $td-color-red-component-low-1;
+$td-button-ghost-color-background-hovered: $td-color-black-background-low;
+
+// Focus
+$td-button-secondary-color-background-focused: $td-color-red-component-low;
+$td-button-secondary-color-border-focused: $td-color-red-border-low;
+$td-button-ghost-color-background-focused: $td-color-black-background-low;
+$td-button-ghost-color-border-focused: $td-color-red-border-low;
+
+// Press
+$td-button-secondary-color-background-pressed: $td-color-red-component-low;
+$td-button-secondary-icon-color-pressed: $td-color-red-icon-default;
+$td-button-ghost-color-background-pressed: $td-color-black-background-low-1;
+$td-button-ghost-color-text-pressed: $td-color-gray-text-med;
+$td-button-ghost-icon-color-pressed: $td-color-gray-icon-med;
+
+// Disabled
+$td-button-secondary-color-background-disabled: $td-color-red-component-low-1;
+$td-button-secondary-color-text-disabled: $td-color-red-text-low;
+$td-button-secondary-icon-color-disabled: $td-color-red-icon-default;
+$td-button-ghost-color-background-disabled: none;
+$td-button-ghost-color-text-disabled: $td-color-gray-text-default;
+$td-button-ghost-icon-color-disabled: $td-color-gray-icon-med;

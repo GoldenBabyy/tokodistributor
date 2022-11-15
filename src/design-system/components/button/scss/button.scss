@@ -1,0 +1,100 @@
+@import './button-tokens';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--td-button-padding);
+  width: var(--td-button-custom-width);
+  font: var(--td-button-text);
+  color: var(--td-button-color-text);
+  background-color: var(--td-button-color-background);
+  border-radius: 8px;
+  & *:not(:last-child) { margin-right: 4px; }
+  svg {
+    width: var(--td-button-icon-size);
+    height: var(--td-button-icon-size);
+  }
+  &:active, 
+  &:focus,
+  &:focus-visible,
+  &:hover { outline: none; }
+  &-full-width {
+    --td-button-custom-width: 100%;
+  }
+  &-xs { 
+    --td-button-text: #{$td-button-text-xs};
+    --td-button-padding: #{$td-button-padding-xs};
+    --td-button-icon-size: #{$td-button-icon-size-xs};
+    &.button-icon-only {--td-button-padding: 8px; }
+  }
+  &-sm { 
+    --td-button-text: #{$td-button-text-sm};
+    --td-button-padding: #{$td-button-padding-sm};
+    --td-button-icon-size: #{$td-button-icon-size-sm};
+    &.button-icon-only {--td-button-padding: 8px; }
+  }
+  &-base { 
+    --td-button-text: #{$td-button-text-base};
+    --td-button-padding: #{$td-button-padding-base};
+    --td-button-icon-size: #{$td-button-icon-size-base};
+    &.button-icon-only {--td-button-padding: 8px; }
+  }
+  &-md { 
+    --td-button-text: #{$td-button-text-md};
+    --td-button-padding: #{$td-button-padding-md};
+    --td-button-icon-size: #{$td-button-icon-size-base};
+    &.button-icon-only {--td-button-padding: 9px; }
+  }
+  &-lg { 
+    --td-button-text: #{$td-button-text-lg};
+    --td-button-padding: #{$td-button-padding-lg};
+    --td-button-icon-size: #{$td-button-icon-size-base};
+    &.button-icon-only {--td-button-padding: 11px; }
+  }
+  &:not(.button-disabled) {
+    &.button {
+      &-secondary {
+        --td-button-color-background: #{$td-button-secondary-color-background};
+        --td-button-color-text: #{$td-button-secondary-color-text};
+        --td-button-color-background-hovered: #{$td-button-secondary-color-background-hovered};
+        --td-button-color-background-pressed: #{$td-button-secondary-color-background-pressed};
+        --td-button-color-background-focused: #{$td-button-secondary-color-background-focused};
+        --blu-button-color-border: #{$td-button-secondary-color-border-focused};
+      }
+      &-ghost {
+        --td-button-color-background: #{$td-button-ghost-color-background};
+        --td-button-color-text: #{$td-button-ghost-color-text};
+        --td-button-color-background-hovered: #{$td-button-ghost-color-background-hovered};
+        --td-button-color-background-pressed: #{$td-button-ghost-color-background-pressed};
+        --td-button-color-background-focused: #{$td-button-ghost-color-background-focused};
+        --blu-button-color-border: #{$td-button-ghost-color-border-focused};
+      }
+    }
+    &:focus,
+    &:active { --td-button-color-background: var(--td-button-color-background-pressed); }
+    &:focus-visible {
+      --td-button-color-background: var(--td-button-color-background-focused);
+      box-shadow: 0 0 0 4px var(--blu-button-color-border);
+    }
+    &:hover { --td-button-color-background: var(--td-button-color-background-hovered); }
+  }
+  &-disabled {
+    &.button-secondary {
+      --td-button-color-background: #{$td-button-secondary-color-background-disabled};
+      --td-button-color-text: #{$td-button-secondary-color-text-disabled};
+    }
+    &.button-ghost {
+      --td-button-color-background: #{$td-button-ghost-color-background-disabled};
+      --td-button-color-text: #{$td-button-ghost-color-text-disabled};
+    }
+    cursor: not-allowed;
+    &:active { pointer-events: none; }
+  }
+  &__icon {
+    display: flex;
+    margin-right: 8px;
+  }
+}
+
+a { text-decoration: none; }
